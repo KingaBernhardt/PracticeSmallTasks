@@ -9,7 +9,7 @@ namespace EmployeesSQL_WEB_API.Controllers
 {
     public class EmployeesController : ApiController
     {
-        public IEnumerable<Employee> Get()
+        public IEnumerable<Employee> GetEmployees()
         {
             using (EmployeeDBEntities entities = new EmployeeDBEntities())
             {
@@ -17,7 +17,7 @@ namespace EmployeesSQL_WEB_API.Controllers
             }
         }
 
-        public HttpResponseMessage Get(int id)
+        public HttpResponseMessage GetEmployeeById(int id)
         {
             using (EmployeeDBEntities entities = new EmployeeDBEntities())
             {
@@ -34,12 +34,10 @@ namespace EmployeesSQL_WEB_API.Controllers
             }
         }
         
-        public HttpResponseMessage Post([FromBody] Employee employee)
+        public HttpResponseMessage PostEmployee([FromBody] Employee employee)
         {
             try
             {
-
-
                 using (EmployeeDBEntities entities = new EmployeeDBEntities())
                 {
                     entities.Employees.Add(employee);
@@ -56,7 +54,7 @@ namespace EmployeesSQL_WEB_API.Controllers
             }
         }
 
-        public HttpResponseMessage Delete(int id)
+        public HttpResponseMessage DeleteEmployee(int id)
         {
             try
             {
@@ -81,7 +79,7 @@ namespace EmployeesSQL_WEB_API.Controllers
             }
         }
 
-        public HttpResponseMessage Put(int id, [FromBody] Employee employee)
+        public HttpResponseMessage PutEmployeeById(int id, [FromBody] Employee employee)
         {
             try
             {
