@@ -24,5 +24,15 @@ namespace EmployeesSQL_WEB_API.Controllers
                 return entities.Employees.FirstOrDefault(e => e.ID == id);
             }
         }
+        
+        public HttpResponseMessage Post([FromBody] Employee employee)
+        {
+            using(EmployeeDBEntities entities = new EmployeeDBEntities())
+            {
+                entities.Employees.Add(employee);
+                entities.SaveChanges();
+                var message = Request.CreateResponse(HttpStatusCode.Created, employee);
+            }
+        }
     }
 }
