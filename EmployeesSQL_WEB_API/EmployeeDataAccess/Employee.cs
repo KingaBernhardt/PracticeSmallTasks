@@ -11,7 +11,9 @@ namespace EmployeeDataAccess
 {
     using System;
     using System.Collections.Generic;
-    
+    using EmployeesSQL_WEB_API;
+
+
     public partial class Employee
     {
         public int ID { get; set; }
