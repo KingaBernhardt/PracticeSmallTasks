@@ -74,5 +74,11 @@ namespace ApiCall
                 }
             }
         }
+
+        private void sunInformationButton_Click(object sender, RoutedEventArgs e)
+        {
+            SunInfo sunInfo = new SunInfo();
+            sunInfo.Show();
+        }
     }
 }

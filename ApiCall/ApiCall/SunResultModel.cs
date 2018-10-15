@@ -8,6 +8,6 @@ namespace ApiCall
 {
     public class SunResultModel
     {
-
+        public SunModel Results { get; set; }
     }
 }

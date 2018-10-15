@@ -23,5 +23,12 @@ namespace ApiCall
         {
             InitializeComponent();
         }
+
+        private async void loadSunInfo_Click(object sender, RoutedEventArgs e)
+        {
+            var sunInfo = await SunProcessor.LoadSunInformation();
+            sunriseText.Text = $"Sunrise is at {sunInfo.Sunrise.ToLocalTime().ToShortTimeString() }";
+            sunsetText.Text = $"Sunset is at {sunInfo.Sunset.ToLocalTime().ToShortTimeString() }";
+        }
     }
 }
