@@ -9,9 +9,9 @@ namespace ApiCall
 {
     public class ComicProcessor
     {
-        public int MaxComicNumber { get; set; }
+        public static int MaxComicNumber { get; set; }
 
-        public async Task<ComicModel> LoadComic(int comicNumber = 0)
+        public static async Task<ComicModel> LoadComic(int comicNumber = 0)
         {
             string url = "";
             if (comicNumber > 0)

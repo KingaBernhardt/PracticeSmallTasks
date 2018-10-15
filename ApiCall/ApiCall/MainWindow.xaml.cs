@@ -44,5 +44,15 @@ namespace ApiCall
         {
             await LoadImage();
         }
+
+        private void previousImageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void nextImageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
