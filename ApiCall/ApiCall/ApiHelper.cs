@@ -16,7 +16,7 @@ namespace ApiCall
         {
             ApiClient = new HttpClient();
 
-            //Usually we would use a base address and append the called route to it, but now the baseaddress comes from to address so I leave it blank.
+            //Usually we would use a base address and append the called route to it, but now I leave it blank, as I use the httpclient for more than one baseaddress(sunrise,comic).
             //ApiClient.BaseAddress = new Uri("http://xkcd.com/");
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
